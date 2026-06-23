@@ -1,0 +1,9 @@
+category,metric,model_value,real_value,unit,source
+Tier Revenue Share,Common,9.0,27.2,%,Steam Market (4 legacy cases avg) vs Valve disclosed odds
+Tier Revenue Share,Rare,25.3,16.9,%,Steam Market (4 legacy cases avg) vs Valve disclosed odds
+Tier Revenue Share,Epic,38.1,15.8,%,Steam Market (4 legacy cases avg) vs Valve disclosed odds
+Tier Revenue Share,Legendary,27.5,40.1,%,Steam Market (4 legacy cases avg) vs Valve disclosed odds
+Price per Box,Revenue-Maximizing Price,7.75,2.5,USD,Official CS2 key price (unchanged since 2013) vs model price sweep
+Price per Box,Paper Baseline Price,3.86,2.5,USD,Original paper calibration vs official CS2 key price
+Whale Revenue Concentration,Whale Revenue Share (5% population),28.0,50.0,%,"Model prediction vs peer-reviewed loot box spending study (n=7,767)"
+Whale Revenue Concentration,Top-1%-Spender Revenue Share,,29.0,%,"Everyplay mobile game spending survey (n=3,000+), not directly modeled"

@@ -1,0 +1,17 @@
+case,model_tier,real_drop_rate,avg_item_price_usd,n_items_priced,tier_ev_contribution
+CS:GO Weapon Case 3,Common,0.7992,4.56,5,3.643
+CS:GO Weapon Case 3,Rare,0.1598,9.9,3,1.582
+CS:GO Weapon Case 3,Epic,0.032,24.09,1,0.771
+CS:GO Weapon Case 3,Legendary,0.009000000000000001,157.8,1,1.42
+Operation Bravo Case,Common,0.7992,7.88,6,6.296
+Operation Bravo Case,Rare,0.1598,39.22,3,6.267
+Operation Bravo Case,Epic,0.032,154.14,1,4.932
+Operation Bravo Case,Legendary,0.009000000000000001,828.57,1,7.457
+Chroma Case,Common,0.7992,0.89,5,0.71
+Chroma Case,Rare,0.1598,2.71,3,0.433
+Chroma Case,Epic,0.032,19.36,3,0.62
+Chroma Case,Legendary,0.009000000000000001,250.29,2,2.253
+Spectrum Case,Common,0.7992,0.65,7,0.522
+Spectrum Case,Rare,0.1598,2.05,5,0.328
+Spectrum Case,Epic,0.032,17.49,3,0.56
+Spectrum Case,Legendary,0.009000000000000001,193.28,2,1.74
