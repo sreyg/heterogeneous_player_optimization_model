@@ -1,8 +1,15 @@
 # Heterogeneous Player Optimization Model
 ### A Game-Theoretic Analysis of Loot Box Revenue Optimization
 
-**Hok San Ku (Jason)** · MATH 111A · UC San Diego · December 2025  
-Extended: Monte Carlo sweep, price optimization, and real-world market validation · June 2026
+**Hok San Ku (Jason)** · MATH 111A Game Theory · UC San Diego · December 2025  
+Extended for portfolio: Monte Carlo sweep, price optimization, and real-world market validation · June 2026
+
+---
+
+## Dashboard
+**[View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/math111a_tableau_dashboard/Dashboard1)**
+
+Includes: Price × Pity revenue heatmap, dual-model tier comparison, player segment behavior, and model vs. real-world benchmarks.
 
 ---
 
@@ -16,8 +23,14 @@ The central question: **what reward probabilities maximize developer revenue whi
 
 ## Key Findings
 
-### 1. Epic Tier Dominance
-Medium-rarity items at ~4% drop rate generate **38% of total revenue** — more than any other single tier. This reflects an optimal accessibility-desirability tradeoff: a 28% acquisition probability at typical engagement is achievable enough to motivate spending, scarce enough to maintain prestige value.
+### 1. Two Models, Two Answers: Utility vs. Market Value
+The project contains two complementary models that answer different questions about tier revenue concentration:
+
+**Utility-based model (original paper):** When items are valued by *player willingness-to-pay*, medium-rarity Epic items (~4% drop rate) dominate at **38% of revenue** — the accessibility-desirability sweet spot. Items must be rare enough to be desirable but common enough to feel attainable.
+
+**Market-price-based model (v3 recalibration):** When items are valued at *actual Steam Market resale prices* (129 real skins sampled across active cases), revenue concentration shifts dramatically to **Legendary at 83%** — because real market prices are so top-heavy ($65-443 for Covert vs. cents-to-dollars below) that the price gap overwhelms the probability gap.
+
+**The insight:** these are not contradictory errors but different economic quantities. A loot box item's *player-perceived value* (what it's worth to own and enjoy) and its *market resale value* (what it sells for) diverge sharply, and which one drives revenue depends on whether players treat boxes as consumption (utility) or investment (resale). This distinction is invisible in single-valuation models.
 
 ### 2. The Pity Paradox
 Guaranteed reward systems (pity mechanics) **decrease revenue by 14%** in multi-tier contexts, contrary to conventional wisdom. Only 1.2% of players reach the pity threshold, so the guarantee affects almost no one's behavior while imposing real implementation costs. Multi-tier structures already provide adequate engagement — pity systems substitute for, rather than complement, tiered reward design.
@@ -113,10 +126,12 @@ heterogeneous_player_optimization_model/
 ## Data Notes and Limitations
 
 - **Simulation data is synthetic**: fatigue parameters are sampled from calibrated uniform distributions, not observed player behavior. This is stated explicitly to avoid misrepresentation.
-- **Steam Market prices reflect secondary resale value**, not primary player willingness-to-pay. The two concepts are related but not identical — this distinction matters for interpreting the tier revenue divergence.
-- **All 4 sampled cases are discontinued legacy cases**: their Legendary-tier items carry collector-scarcity premium accumulated over years. An active case comparison would likely show closer alignment with the model's Epic Tier Dominance finding.
-- **Within-tier item weighting assumed uniform**: Valve has not disclosed item-level weighting within a rarity tier. The community standard assumption of equal probability is used here.
-- **Pity system model is static (one-shot)**: real pity systems track accumulated bad luck across sessions, creating multi-period dynamics the current model does not capture.
+- **v3 recalibration** grounds reward values in 129 real Steam Market prices sampled across ~19 active CS2 cases (≈32 items per tier), replacing the original model's single assumed value per tier. Reward draws are sampled from per-tier lognormal distributions fitted to this real data, winsorized at the 99th percentile to prevent single extreme draws from dominating.
+- **Engagement is calibrated, not tuned to revenue**: the valuation multiplier is set so aggregate engagement reproduces the paper's validated ~8 boxes/player (industry norm 5-15), not to hit any revenue target.
+- **Whale concentration coupling**: whale revenue share, tier distribution, and engagement are mutually coupled — no single static parameterization matches all external benchmarks simultaneously. This tension is itself evidence that real loot-box economies are driven by multi-period dynamics the one-shot model cannot capture.
+- **Steam Market prices reflect secondary resale value**, not primary player willingness-to-pay. The two concepts are related but distinct — this is precisely why the utility-based and market-based models diverge.
+- **Within-tier item weighting assumed uniform**: Valve has not disclosed item-level weighting within a rarity tier.
+- **Static one-shot framework**: real pity systems and player behavior span multiple sessions; this is the model's primary structural limitation.
 
 ---
 

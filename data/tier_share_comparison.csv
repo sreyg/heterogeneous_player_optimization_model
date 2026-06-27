@@ -1,0 +1,9 @@
+tier,model,revenue_share_pct,valuation_basis
+Common,Paper (utility-based),9.0,Player willingness-to-pay
+Common,v3 (market-price-based),0.8,Steam Market resale price
+Rare,Paper (utility-based),25.3,Player willingness-to-pay
+Rare,v3 (market-price-based),3.9,Steam Market resale price
+Epic,Paper (utility-based),38.1,Player willingness-to-pay
+Epic,v3 (market-price-based),12.6,Steam Market resale price
+Legendary,Paper (utility-based),27.5,Player willingness-to-pay
+Legendary,v3 (market-price-based),82.7,Steam Market resale price
