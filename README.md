@@ -1,7 +1,7 @@
 # Heterogeneous Player Optimization Model
 ### A Game-Theoretic Analysis of Loot Box Revenue Optimization
 
-**Hok San Ku (Jason)** · MATH 111A Game Theory · UC San Diego · December 2025  
+**Hok San Ku (Jason)** · MATH 111A · UC San Diego · December 2025  
 Extended for portfolio: Monte Carlo sweep, price optimization, and real-world market validation · June 2026
 
 ---
